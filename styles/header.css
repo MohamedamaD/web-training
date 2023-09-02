@@ -1,0 +1,90 @@
+header {
+    position: relative;
+    background-color: #fdfdfd;
+    padding: 10px 6%;
+    color: #000;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 22;
+    height: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.header-buttons {
+    float: right;
+}
+
+.header-buttons a {
+    background-color: #0366ff;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+.header-buttons a.fade {
+    display: none;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 992px) {
+    header > a > h1 {
+        font-size: large;
+    } 
+    .header-buttons a {
+        font-size: small;
+        padding: 6px 12px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        margin: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+}
